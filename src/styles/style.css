@@ -3,6 +3,7 @@
   --clr-black: #1c1c1c;
   --clr-gray: #a39c9c;
   --clr-white: #f7f7f7;
+  --clr-border-card: #f8d030;
 
   --type-normal: #a8a878;
   --type-fire: #f08030;
@@ -28,7 +29,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  color: var(--clr-black);
+  color: var(--clr-white);
   font-family: 'Rubik', sans-serif;
 }
 
@@ -98,7 +99,7 @@ main {
 }
 
 .card {
-  background-color: var(--clr-white);
+  background-color: var(--clr-black);
   box-shadow: 0 0 3rem -1rem rgba(0, 0, 0, 0.25);
   padding-block: 1rem;
   text-transform: uppercase;
@@ -106,18 +107,22 @@ main {
   isolation: isolate;
   overflow: hidden;
   /* background-color: #f2f2f2; */
+  border: 2px solid var(--clr-border-card);
 }
 
 .poke-id-back {
   position: absolute;
-  top: 1rem;
-  left: 50%;
-  transform: translateX(-60%);
-  font-size: 6rem;
+  top: 0;
+  font-size: 1rem;
   font-weight: 500;
-  /* color: var(--clr-gray); */
-  color: var(--clr-gray);
+  width: 40px;
+  height: 24px;
+  display: flex;
+  justify-content: center;
+  color: var(--clr-black);
+  background-color: var(--clr-border-card);
   z-index: -1;
+  border-bottom-right-radius: 5px;
 }
 
 .poke-img {
@@ -152,7 +157,7 @@ main {
 .poke-id {
   font-size: 1rem;
   font-weight: 500;
-  color: var(--clr-black);
+  color: var(--clr-white);
 }
 
 .card-info-bottom {
